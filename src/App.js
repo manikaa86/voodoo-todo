@@ -17,22 +17,22 @@ const App = () => {
   const [selectedType, setSelectedType] = useState('glazed');
 
   const handleActionClick = (label) => {
-    // TODO update the selectedAction state to reflect the new label
+    setSelectedAction(label);
   };
 
   const handleTypeClick = (label) => {
-    // TODO update the selectedType state to reflect the new label
+    setSelectedType(label);
   };
 
   const handleBoxClick = (userId, donutId) => {
     switch (selectedAction) {
       case actions.sprinkles.action:
-        // TODO toggle donut sprinkles prop on selected donut using function `alterSprinklesToDonut`
-        // and update the `donutShelfData` state
+        setDonutShelfData(
+          alterSprinklesToDonut(donutShelfData, userId, selectedType)
+        );
         break;
       case actions.filled.action:
-        // TODO toggle donut filled prop on selected donut using function `alterFillingToDonut`
-        // and update the `donutShelfData` state
+        setDonutShelfData(addDonutToBox(donutShelfData, userId, selectedType));
         break;
       case actions.add.action:
         // TODO add donut to selected box using function `addDonutToBox`
@@ -64,8 +64,8 @@ const App = () => {
           handleTypeClick={ReplaceMeWithCorrectFunction}
         />
         <DonutShelf
-          donutShelfData={[]} // ReplaceWithCorrectValue
-          handleBoxClick={ReplaceMeWithCorrectFunction}
+          donutShelfData={donutShelfData}
+          handleBoxClick={handleBoxClick}
           isAdd={selectedAction === actions.add.action}
         />
       </div>

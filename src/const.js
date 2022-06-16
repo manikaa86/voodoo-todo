@@ -1,24 +1,24 @@
 export const actions = {
   sprinkles: {
-    name: 'Sprinkles',
-    action: 'sprinkles'
+    name: "Sprinkles",
+    action: "sprinkles",
   },
   filled: {
-    name: 'Filled',
-    action: 'filled'
+    name: "Filled",
+    action: "filled",
   },
   add: {
-    name: 'Add',
-    action: 'addMoreDonut'
+    name: "Add",
+    action: "addMoreDonut",
   },
   remove: {
-    name: 'Remove',
-    action: 'deleteDonut'
+    name: "Remove",
+    action: "deleteDonut",
   },
   flavor: {
-    name: 'Flavor',
-    action: 'changeFlavor'
-  }
+    name: "Flavor",
+    action: "changeFlavor",
+  },
 };
 
 export const actionOptions = [
@@ -26,173 +26,173 @@ export const actionOptions = [
   actions.filled,
   actions.add,
   actions.remove,
-  actions.flavor
+  actions.flavor,
 ];
 
 export const flavorOptions = [
   {
-    name: 'Cherry',
-    action: 'cherry'
+    name: "Cherry",
+    action: "cherry",
   },
   {
-    name: 'Glazed',
-    action: 'glazed'
+    name: "Glazed",
+    action: "glazed",
   },
   {
-    name: 'Chocolate',
-    action: 'chocolate'
+    name: "Chocolate",
+    action: "chocolate",
   },
   {
-    name: 'Maple',
-    action: 'maple'
-  }
+    name: "Maple",
+    action: "maple",
+  },
 ];
 
 export const initialData = [
   {
     name: "Manika's Box",
-    userId: 'user-1',
+    userId: "user-1",
     donuts: [
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: true,
         filled: true,
-        donutId: 'donut-1'
+        donutId: "donut-1",
       },
       {
-        flavor: 'maple',
+        flavor: "maple",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-2'
+        donutId: "donut-2",
       },
       {
-        flavor: 'cherry',
+        flavor: "cherry",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-3'
+        donutId: "donut-3",
       },
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: false,
         filled: true,
-        donutId: 'donut-4'
+        donutId: "donut-4",
       },
       {
-        flavor: 'maple',
+        flavor: "maple",
         sprinkles: false,
         filled: false,
-        donutId: 'donut-5'
+        donutId: "donut-5",
       },
       {
-        flavor: 'glazed',
+        flavor: "glazed",
         sprinkles: false,
         filled: false,
-        donutId: 'donut-6'
+        donutId: "donut-6",
       },
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: false,
         filled: true,
-        donutId: 'donut-7'
+        donutId: "donut-7",
       },
       {
-        flavor: 'maple',
+        flavor: "maple",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-8'
+        donutId: "donut-8",
       },
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: false,
         filled: false,
-        donutId: 'donut-9'
+        donutId: "donut-9",
       },
       {
-        flavor: 'glazed',
+        flavor: "glazed",
         sprinkles: false,
         filled: true,
-        donutId: 'donut-10'
+        donutId: "donut-10",
       },
       {
-        flavor: 'maple',
+        flavor: "maple",
         sprinkles: false,
         filled: true,
-        donutId: 'donut-11'
+        donutId: "donut-11",
       },
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-12'
-      }
-    ]
+        donutId: "donut-12",
+      },
+    ],
   },
   {
     name: "Ashley's Box",
-    userId: 'user-2',
+    userId: "user-2",
     donuts: [
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: false,
         filled: true,
-        donutId: 'donut-13'
+        donutId: "donut-13",
       },
       {
-        flavor: 'maple',
+        flavor: "maple",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-14'
+        donutId: "donut-14",
       },
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: false,
         filled: false,
-        donutId: 'donut-15'
-      }
-    ]
+        donutId: "donut-15",
+      },
+    ],
   },
   {
     name: "Randunu's Box",
-    userId: 'user-3',
+    userId: "user-3",
     donuts: [
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: false,
         filled: true,
-        donutId: 'donut-16'
+        donutId: "donut-16",
       },
       {
-        flavor: 'maple',
+        flavor: "maple",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-17'
+        donutId: "donut-17",
       },
       {
-        flavor: 'glazed',
+        flavor: "glazed",
         sprinkles: false,
         filled: false,
-        donutId: 'donut-18'
+        donutId: "donut-18",
       },
       {
-        flavor: 'chocolate',
+        flavor: "chocolate",
         sprinkles: false,
         filled: true,
-        donutId: 'donut-19'
+        donutId: "donut-19",
       },
       {
-        flavor: 'maple',
+        flavor: "maple",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-20'
+        donutId: "donut-20",
       },
       {
-        flavor: 'glazed',
+        flavor: "glazed",
         sprinkles: true,
         filled: false,
-        donutId: 'donut-21'
-      }
-    ]
-  }
+        donutId: "donut-21",
+      },
+    ],
+  },
 ];
 
 export const ReplaceMeWithCorrectFunction = () => {};

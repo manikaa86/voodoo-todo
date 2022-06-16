@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import './App.css';
-import { initialData, actions, ReplaceMeWithCorrectFunction } from './const';
-import ControlPanel from './ControlPanel';
-import DonutShelf from './DonutShelf';
+import { useState } from "react";
+import "./App.css";
+import { initialData, actions, actionOptions, flavorOptions } from "./const";
+import ControlPanel from "./ControlPanel";
+import DonutShelf from "./DonutShelf";
 import {
   addDonutToBox,
   alterSprinklesToDonut,
   alterFillingToDonut,
   removeDonutFromBox,
-  alterDonutFlavor
-} from './utils';
+  alterDonutFlavor,
+} from "./utils";
 
 const App = () => {
   const [donutShelfData, setDonutShelfData] = useState(initialData);
-  const [selectedAction, setSelectedAction] = useState('addMoreDonut');
-  const [selectedType, setSelectedType] = useState('glazed');
+  const [selectedAction, setSelectedAction] = useState(actions.add.action);
+  const [selectedType, setSelectedType] = useState("glazed");
 
   const handleActionClick = (label) => {
     setSelectedAction(label);
@@ -32,36 +32,37 @@ const App = () => {
         );
         break;
       case actions.filled.action:
-        setDonutShelfData(addDonutToBox(donutShelfData, userId, selectedType));
+        setDonutShelfData(alterFillingToDonut(donutShelfData, userId, donutId));
         break;
       case actions.add.action:
-        // TODO add donut to selected box using function `addDonutToBox`
         setDonutShelfData(addDonutToBox(donutShelfData, userId, selectedType));
         break;
       case actions.remove.action:
-        console.log('click! add functionality to to delete me');
-        // TODO delete selected donut using function `removeDonutFromBox`
-        // and update the `donutShelfData` state
+        console.log("click! add functionality to to delete me");
+        setDonutShelfData(removeDonutFromBox(donutShelfData, userId, donutId));
+
         break;
       case actions.flavor.action:
-        console.log('click! add functionality to update my flavor');
-        // TODO update flavor of selected donut using function `alterDonutFlavor`
-        // and update the `donutShelfData` state
+        console.log("click! add functionality to update my flavor");
+        // function
+        setDonutShelfData(
+          alterDonutFlavor(donutShelfData, userId, donutId, selectedType)
+        );
         break;
       default:
-        console.error('An invalid action was passed to handleBoxClick');
+        console.error("An invalid action was passed to handleBoxClick");
     }
   };
 
   return (
-    <div className='app-wrapper'>
+    <div className="app-wrapper">
       <h1>Voodoo Todo:</h1>
-      <div className='app-container'>
+      <div className="app-container">
         <ControlPanel
-          selectedAction={'ReplaceWithCorrectValue'}
-          handleActionClick={ReplaceMeWithCorrectFunction}
-          selectedType={'ReplaceWithCorrectValue'}
-          handleTypeClick={ReplaceMeWithCorrectFunction}
+          selectedAction={selectedAction}
+          handleActionClick={handleActionClick}
+          selectedType={selectedType}
+          handleTypeClick={handleTypeClick}
         />
         <DonutShelf
           donutShelfData={donutShelfData}
